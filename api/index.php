@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Document</title>
 
-    <link rel="stylesheet" type="text/css" href="../diseno.css">
+    <link rel="stylesheet" type="text/css" href="../static/diseno.css">
 
 
 
