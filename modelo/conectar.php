@@ -9,7 +9,7 @@
 
                 try{
 
-                    $conexion=new PDO("mysql:host=localhost;dbname=pruebas", "root", "");
+                    $conexion=new PDO("mysql://root:Y9G2fN79auIQqJloGepT@containers-us-west-149.railway.app:6539/railway");
 
                     $conexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
