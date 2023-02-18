@@ -53,6 +53,8 @@
     $matrizpersonas=$persona->get_personas();
 
 
+    require __DIR__. "/../modelo/paginacion.php";
+
     //require_once("vista/personas_view.php");  
     require __DIR__. "/../vista/personas_view.php";
 

@@ -9,7 +9,7 @@
 
 <?php
 
-    require("modelo/paginacion.php");
+
 
 
 /* ESTO ES EL "INSERT INTO" SI LO HAGO DESDE ESTE MISMO ARCHIVO" 
