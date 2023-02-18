@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title>Documento sin título</title>
-<link rel="stylesheet" type="text/css" href="../diseño.css">
+<link rel="stylesheet" type="text/css" href="../diseno.css">
 </head>
 
 <body>

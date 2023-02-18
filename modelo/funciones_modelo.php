@@ -43,14 +43,14 @@
 
         public function borrar_personas(){    
 
-            /*$id=$_GET["id"];
-            $consulta=$this->db->query("DELETE FROM contactos4 WHERE id='$id'");*/
+            $id=$_GET["id"];
+            $consulta=$this->db->query("DELETE FROM contactos4 WHERE id='$id'");
 
            
-            $id=$_GET["id"];
-            $sql="DELETE FROM contactos4 WHERE id='$id'";
-            $consulta=$this->db->prepare($sql);
-            $consulta->execute(array($id));
+            // $id=$_GET["id"];
+            // $sql="DELETE FROM contactos4 WHERE id='$id'";
+            // $consulta=$this->db->prepare($sql);
+            // $consulta->execute(array($id));
             
             
         }
