@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Document</title>
 
-    <link rel="stylesheet" type="text/css" href="../hoja.css">
+    <link rel="stylesheet" type="text/css" href="../diseño.css">
 
 
 
@@ -12,16 +12,12 @@
 </head>
 <body>
 
-<h1>Modelo vista controlador</h1>
-<br>                     
+<br>             
 
 <?php 
 
-    //require_once("controlador/personas_controlador.php");
-    require __DIR__. "/../controlador/personas_controlador.php";
-    
-
-
+    //require_once("controlador/union_controlador.php");
+    require __DIR__. "/../controlador/union_controlador.php";
 ?>
 
 </body>

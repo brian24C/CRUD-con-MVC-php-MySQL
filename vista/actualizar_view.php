@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title>Documento sin título</title>
-<link rel="stylesheet" type="text/css" href="../hoja.css">
+<link rel="stylesheet" type="text/css" href="../diseño.css">
 </head>
 
 <body>
@@ -12,46 +12,57 @@
 
 <?php
 
-  $id=$_GET["id"];
-  $nom=$_GET["nombre"];
-  $apell=$_GET["apellido"];
-  $dir=$_GET["direccion"];
+  $id=$_GET["id"];                     
+  $apellido=trim($_GET["apellido"]);         #NOTASA: el $_GET al parecer me bota el dato con un espacio adicional por ejem el apellido así -> (MARTINEZ )
+  $nombre=trim($_GET["nombre"]);                   #es por eso que si no pongo la funcion "trim" entonces me dará en la casilla siempre con un espacio de más.
+  $direccion=trim($_GET["direccion"]);             # en la linea 46 de funciones_modelos.php no importa si el GET me bota espacios, porque igual me funcionará.
+  $poblacion=trim($_GET["poblacion"]);
+  $telefonos=trim($_GET["telefonos"]);
 
-  
+  $pagina=$_GET["pagina"];
+
 
 ?>
 
-<p>
- 
-</p>
-<p>&nbsp;</p>
+
+
 <form name="form1" method="post" action="<?php echo $_SERVER["PHP_SELF"]; ?>">
-  <table width="25%" border="0" align="center">
+
+<table>
+
+    <tr >
+      <td class="primera_fila">Id</td>
+      <td class="primera_fila">Apellido</td>
+      <td class="primera_fila">Nombre</td>
+      <td class="primera_fila">Dirección</td>
+      <td class="primera_fila">Población</td>
+      <td class="primera_fila">Número</td>
+    </tr> 
+   
     <tr>
-      <td></td>
-      <td><label for="id"></label>
-      <input type="hidden" name="id" id="id" value="<?php echo $id; ?>"></td>
+      
+      <td><input  class="sincontorno" type="text" name="id" value="<?php echo $id?>"></td>
+
+      <td><input class="sincontorno" type="text" name="apellido" value="<?php echo $apellido?>"></td>
+
+      <td><input class="sincontorno" type="text" name="nombre" value="<?php echo $nombre?>"></td>
+
+      <td><input class="sincontorno" type="text" name="direccion" value="<?php echo $direccion?>"></td>
+
+      <td><input class="sincontorno" type="text" name="poblacion" value="<?php echo $poblacion?>"></td>
+
+      <td><input class="sincontorno" type="text" name="telefonos" value="<?php echo $telefonos?>"></td>
+
+      <td class="sincontorno"><input type="hidden" name="pagina_actualizar" value="<?php echo $pagina?>"></td>
+
     </tr>
+
     <tr>
-      <td>Nombre</td>
-      <td><label for="nom"></label>
-      <input type="text" name="nom" id="nom" value="<?php echo $nom; ?>"></td>
-    </tr>
-    <tr>
-      <td>Apellido</td>
-      <td><label for="ape"></label>
-      <input type="text" name="ape" id="ape" value="<?php echo $apell; ?>"></td>
-    </tr>
-    <tr>
-      <td>Dirección</td>
-      <td><label for="dir"></label>
-      <input type="text" name="dir" id="dir" value="<?php echo $dir; ?>"></td>
-    </tr>
-    <tr>
-      <td colspan="2"><input type="submit" name="bot_actualizar" id="bot_actualizar" value="Actualizar"></td>
-    </tr>
-  </table>
+      <td colspan="6" class="sincontorno"><input style="BORDER:1px dashed; FONT-SIZE: 12pt"  type="submit" name="bot_actualizar" value="Actualizar"></td>
+    </tr>   
+      
+</table>
 </form>
-<p>&nbsp;</p>
+
 </body>
 </html>
