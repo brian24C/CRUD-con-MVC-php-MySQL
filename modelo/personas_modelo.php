@@ -8,7 +8,7 @@
 
         public function __construct(){
 
-            require_once("modelo/Conectar.php");
+            //require_once("modelo/Conectar.php");
 
             $this->db=Conectar::conexion();
 
@@ -19,8 +19,8 @@
 
         public function get_personas(){
 
-            require("modelo/paginacion.php");
-
+            //require("modelo/paginacion.php");
+            require __DIR__. "/../modelo/paginacion.php";
             $consulta=$this->db->query("SELECT * FROM datos_usuarios LIMIT $a,$b");
 
             while ($filas=$consulta->fetch(PDO::FETCH_ASSOC)){

@@ -3,7 +3,7 @@
 
 // -----------------------PAGINACION-------------------------
 
-require_once("conectar.php");
+//require_once("conectar.php");
 
 $base=Conectar::conexion();
 
