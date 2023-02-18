@@ -9,8 +9,8 @@
 
                 try{
 
-                    $conexion=new PDO("mysql://root:Y9G2fN79auIQqJloGepT@containers-us-west-149.railway.app:6539/railway");
-
+                    $conexion=new PDO("mysql:host=containers-us-west-149.railway.app;dbname=railway", "root", "Y9G2fN79auIQqJloGepT");
+                
                     $conexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
                     $conexion->exec("SET CHARACTER SET utf8");
