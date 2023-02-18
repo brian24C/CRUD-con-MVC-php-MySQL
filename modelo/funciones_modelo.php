@@ -22,11 +22,14 @@
 
             //require_once("modelo/paginacion.php");
             require __DIR__. "/../modelo/paginacion.php";
-            $sql="SELECT * FROM contactos ORDER BY ID ASC LIMIT $a,$b";  #DATO CURIOSO PHP, si yo no pongo el "order by" entonces borrar alguna registro en la página y luego inserta un registro, ahí  verás que sucede
-            $resultado=$this->db->prepare($sql);
-            $resultado->execute(array($a,$b));
+            //$sql="SELECT * FROM contactos ORDER BY ID ASC LIMIT $a,$b";  #DATO CURIOSO PHP, si yo no pongo el "order by" entonces borrar alguna registro en la página y luego inserta un registro, ahí  verás que sucede
+            //$resultado=$this->db->prepare($sql);
+            //$resultado->execute(array($a,$b));
 
-            while ($filas=$resultado->fetch(PDO::FETCH_ASSOC))
+            $consulta=$this->db->query("SELECT * FROM contactos ORDER BY ID ASC LIMIT $a,$b");
+
+
+            while ($filas=$consulta->fetch(PDO::FETCH_ASSOC))
                 $this->personas[]=$filas;                                  
             
             return $this->personas;
