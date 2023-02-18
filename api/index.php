@@ -17,7 +17,8 @@
 
 <?php 
 
-    require_once("controlador/personas_controlador.php");
+    //require_once("controlador/personas_controlador.php");
+    require __DIR__. "/../controlador/personas_controlador.php";
     
 
 
