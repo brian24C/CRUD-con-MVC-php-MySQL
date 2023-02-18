@@ -22,11 +22,11 @@
 
             //require_once("modelo/paginacion.php");
             require __DIR__. "/../modelo/paginacion.php";
-            //$sql="SELECT * FROM contactos ORDER BY ID ASC LIMIT $a,$b";  #DATO CURIOSO PHP, si yo no pongo el "order by" entonces borrar alguna registro en la página y luego inserta un registro, ahí  verás que sucede
+            //$sql="SELECT * FROM contactos2 ORDER BY ID ASC LIMIT $a,$b";  #DATO CURIOSO PHP, si yo no pongo el "order by" entonces borrar alguna registro en la página y luego inserta un registro, ahí  verás que sucede
             //$resultado=$this->db->prepare($sql);
             //$resultado->execute(array($a,$b));
 
-            $consulta=$this->db->query("SELECT * FROM contactos ORDER BY ID ASC LIMIT $a,$b");
+            $consulta=$this->db->query("SELECT * FROM contactos2 ORDER BY ID ASC LIMIT $a,$b");
 
 
             while ($filas=$consulta->fetch(PDO::FETCH_ASSOC))
@@ -44,11 +44,11 @@
         public function borrar_personas(){    
 
             /*$id=$_GET["id"];
-            $consulta=$this->db->query("DELETE FROM contactos WHERE id='$id'");*/
+            $consulta=$this->db->query("DELETE FROM contactos2 WHERE id='$id'");*/
 
            
             $id=$_GET["id"];
-            $sql="DELETE FROM contactos WHERE id='$id'";
+            $sql="DELETE FROM contactos2 WHERE id='$id'";
             $consulta=$this->db->prepare($sql);
             $consulta->execute(array($id));
             
@@ -65,7 +65,7 @@
             $poblacion=$_POST["poblacion"];
             $telefono=$_POST["telefonos"];
             
-            $sql="UPDATE contactos SET APELLIDOS=:MIapellido, NOMBRE=:MInombre, DIRECCION=:MIdireccion, POBLACION=:MIpoblacion, TELEFONOS=:MItelefono where ID=:MIid ";
+            $sql="UPDATE contactos2 SET APELLIDOS=:MIapellido, NOMBRE=:MInombre, DIRECCION=:MIdireccion, POBLACION=:MIpoblacion, TELEFONOS=:MItelefono where ID=:MIid ";
 
             $resultado=$this->db->prepare($sql);
 
@@ -83,7 +83,7 @@
             $poblacion=$_POST["poblacion"];
             $telefono=$_POST["telefonos"];
 
-            $sql="INSERT INTO contactos (apellidos,nombre,direccion,poblacion,telefonos) VALUES (:n,:a,:d,:p,:t)"; 
+            $sql="INSERT INTO contactos2 (apellidos,nombre,direccion,poblacion,telefonos) VALUES (:n,:a,:d,:p,:t)"; 
 
             $resultado=$this->db->prepare($sql);
 

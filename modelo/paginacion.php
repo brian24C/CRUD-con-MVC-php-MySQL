@@ -37,7 +37,7 @@ $a=($pagina-1)*$b;
 
 
 
-$sql="SELECT * FROM contactos ";
+$sql="SELECT * FROM contactos2 ";
 $registros=$base->prepare($sql);
 $registros->execute(array());         #$registros->execute();         <-TAMBIEN SE PUEDE ASÍ   CATEGORIA:array
 $num_filas=$registros->rowCount();

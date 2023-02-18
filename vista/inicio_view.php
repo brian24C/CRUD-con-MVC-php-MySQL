@@ -46,7 +46,7 @@
     
     <td><?php echo $persona["ID"]?> </td>          <!-- DATO CURIOSO     Aquí debo poner "ID" en mayuscula porque en mi tabla esta en mayuscula
                                                                          pero cuando hago una intruccion sql no importa si lo pongo en mayuscula o no.
-                                                                         ejem: "INSERT INTO contactos (apellidos,NOMBRE,direccion,POBLACION,TELEFONOS) VALUES (:a,:n,:d,:p,:t)"--> 
+                                                                         ejem: "INSERT INTO contactos2 (apellidos,NOMBRE,direccion,POBLACION,TELEFONOS) VALUES (:a,:n,:d,:p,:t)"--> 
     <td><?php echo $persona["APELLIDOS"]?></td>
     <td><?php echo $persona["NOMBRE"]?></td>
     <td><?php echo $persona["DIRECCION"]?></td>
