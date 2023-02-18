@@ -21,7 +21,7 @@
 
             //require("modelo/paginacion.php");
             require __DIR__. "/../modelo/paginacion.php";
-            $consulta=$this->db->query("SELECT * FROM datos_usuarios LIMIT $a,$b");
+            $consulta=$this->db->query("SELECT * FROM contactos LIMIT $a,$b");
 
             while ($filas=$consulta->fetch(PDO::FETCH_ASSOC)){
 
@@ -40,7 +40,7 @@
 
            
             $id=$_GET["id"];
-            $sql="DELETE FROM DATOS_USUARIOS WHERE id='$id'";
+            $sql="DELETE FROM contactos WHERE id='$id'";
             $consulta=$this->db->prepare($sql);
             $consulta->execute(array($id));
             
@@ -55,7 +55,7 @@
             $apellido=$_POST["ape"];
             $direccion=$_POST["dir"];
             
-            $sql="UPDATE DATOS_USUARIOS SET nombre=:MInombre, apellido=:MIapellido, direccion=:MIdireccion where id=:MIid ";
+            $sql="UPDATE contactos SET nombre=:MInombre, apellido=:MIapellido, direccion=:MIdireccion where id=:MIid ";
 
             $resultado=$this->db->prepare($sql);
 
@@ -70,7 +70,7 @@
             $apellido=$_POST["Ape"];
             $direccion=$_POST["Dir"];
 
-            $sql="INSERT INTO DATOS_USUARIOS (nombre,apellido,direccion) VALUES (:n,:a,:d)"; 
+            $sql="INSERT INTO contactos (nombre,apellido,direccion) VALUES (:n,:a,:d)"; 
 
             $resultado=$this->db->prepare($sql);
 

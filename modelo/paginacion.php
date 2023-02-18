@@ -21,7 +21,7 @@ $b=2;
 $a=($pagina-1)*$b;
 
 
-$sql="SELECT * FROM DATOS_USUARIOS ";
+$sql="SELECT * FROM contactos ";
 $registros=$base->prepare($sql);
 $registros->execute(array());
 $num_filas=$registros->rowCount();

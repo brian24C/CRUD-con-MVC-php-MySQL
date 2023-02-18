@@ -24,7 +24,7 @@ if (isset($_POST["cr"])){
   $apellido=$_POST["Ape"];
   $direccion=$_POST["Dir"];
 
-  $sql="INSERT INTO DATOS_USUARIOS (nombre,apellido,direccion) VALUES (:n,:a,:d)"; 
+  $sql="INSERT INTO contactos (nombre,apellido,direccion) VALUES (:n,:a,:d)"; 
 
   $resultado=$db->prepare($sql);
 
