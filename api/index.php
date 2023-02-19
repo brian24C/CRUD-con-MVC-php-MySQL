@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Document</title>
 
-    <link rel="stylesheet" type="text/css" href="./static/diseno.css" />
+    <link rel="stylesheet" type="text/css" href="https://crud-con-mvc-php-my-oyglw1z0g-brian24c.vercel.app/static/diseno.css" />
 
 
 
